@@ -2,32 +2,30 @@
 
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
-	size_t				i;
+	size_t	i;
+	size_t	srclen;
 
-	d = (unsigned char *)dst;
-	s = (const unsigned char *)src;
 	i = 0;
+	srclen = ft_strlen(src);
 	if (dstsize == 0)
-		return (ft_strlen(src));
-	else if (ft_strlen(src) < dstsize)
+		return (srclen);
+	else if (srclen < dstsize)
 	{	
-		while (s[i] != '\0')
+		while (src[i] != '\0')
 		{
-			d[i] = s[i];
+			dst[i] = src[i];
 			i++;
 		}
-		d[i] = '\0';
+		dst[i] = '\0';
 	}
 	else
 	{
 		while (i < dstsize - 1)
 		{
-			d[i] = s[i];
+			dst[i] = src[i];
 			i++;
 		}
-		d[i] = '\0';
+		dst[i] = '\0';
 	}
-	return (ft_strlen(src));
+	return (srclen);
 }

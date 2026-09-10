@@ -2,7 +2,7 @@
 
 int ft_tolower(int c)
 {
-	(void)c;
-	/* TODO: implement ft_tolower - see the Field Guide for hints */
-	return (0);
+	if (c >= 'A' && c <= 'Z')
+		c = c + 32;
+	return (c);
 }
