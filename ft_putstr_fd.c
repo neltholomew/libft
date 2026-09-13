@@ -2,7 +2,12 @@
 
 void ft_putstr_fd(char *s, int fd)
 {
-	(void)s;
-	(void)fd;
-	/* TODO: implement ft_putstr_fd - see the Field Guide for hints */
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		{
+		ft_putchar_fd(s[i], fd);
+		i++;
+		}
 }
