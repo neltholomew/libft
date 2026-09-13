@@ -2,7 +2,5 @@
 
 void ft_putchar_fd(char c, int fd)
 {
-	(void)c;
-	(void)fd;
-	/* TODO: implement ft_putchar_fd - see the Field Guide for hints */
+	write(fd, &c, 1);
 }
