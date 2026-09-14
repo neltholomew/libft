@@ -2,7 +2,14 @@
 
 void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	(void)s;
-	(void)f;
-	/* TODO: implement ft_striteri - see the Field Guide for hints */
+	size_t	i;
+
+	i = 0;
+	if (s == NULL)
+		return;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
