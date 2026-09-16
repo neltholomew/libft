@@ -2,11 +2,11 @@
 
 t_list *ft_lstnew(void *content)
 {
-	t_list	*next;
+	t_list	*node;
 
-	next = ft_calloc(1, sizeof(t_list));
-	if (next == NULL)
-		return(NULL);
-	next -> content = content;
-	return (next);
+	node = ft_calloc(1, sizeof(t_list));
+	if (node == NULL)
+		return (NULL);
+	node->content = content;
+	return (node);
 }

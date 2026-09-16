@@ -7,6 +7,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	void	*content;
 
 	result = NULL;
+	if (!f)
+		return (NULL);
 	while (lst)
 	{
 		content = f(lst->content);
