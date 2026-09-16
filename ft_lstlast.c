@@ -1,8 +1,10 @@
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	(void)lst;
-	/* TODO: implement ft_lstlast - see the Field Guide for hints */
-	return (NULL);
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }

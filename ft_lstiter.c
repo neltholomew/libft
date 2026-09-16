@@ -1,8 +1,12 @@
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	(void)lst;
-	(void)f;
-	/* TODO: implement ft_lstiter - see the Field Guide for hints */
+	if (!f)
+		return ;
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }
